@@ -30,7 +30,6 @@ if (process.argv.length === 3) {
         if (line) {
             const regex = /%[a-zA-Z_][a-zA-Z0-9_]*%/g;
             let envArray = line.match(regex);
-            console.log("matched:", envArray);
             if (envArray && envArray.length) {
                 for (let e of envArray) {
                     let envValue = process.env[e.slice(1, -1)];
@@ -39,7 +38,6 @@ if (process.argv.length === 3) {
                     }
                 }
             }
-            console.log("replaced perhaps:", line);
             this.output.write(`added ${line}${EOL}`);
         } else {
             this.output.write(EOL);
