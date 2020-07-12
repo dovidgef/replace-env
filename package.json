@@ -1,6 +1,6 @@
 {
   "name": "replace-env",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Command line utility for automatically injecting environment variables into files.",
   "main": "./replace.js",
   "scripts": {

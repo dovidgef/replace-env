@@ -1,7 +1,6 @@
 # replace-env
 
-Command line utility for automatically replacing parts of strings delineated by `%variable_name%`
-replacing them with `variable_name` environment variable if it exists. 
+Command line utility for automatically injecting environment variables into files. 
 This allows you to easily keep sensitive parameters out of your config files and only add them as part of your build process.
 
 ### Prerequisites
