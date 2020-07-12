@@ -1,7 +1,7 @@
 {
   "name": "replace-env",
-  "version": "1.0.2",
-  "description": "Node.js based command line utility for automatically replacing parts of strings delineated by `%variable_name%` replacing them with `variable_name` environment variable if it exists.",
+  "version": "1.0.3",
+  "description": "Command line utility for automatically injecting environment variables into files.",
   "main": "./replace.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

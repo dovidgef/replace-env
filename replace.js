@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 /*
-Node.js based command line utility for automatically replacing parts of strings delineated by %string%
-replacing them with `string` environment variable if it exists.
+Command line utility for automatically injecting environment variables into files.
  */
 'use strict';
 
