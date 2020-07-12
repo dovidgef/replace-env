@@ -20,6 +20,10 @@ if (process.argv.length === 3) {
         process.exit(1);
     }
 
+    // Create copy of file to use for attempted string replacement - Keep file permissions the same
+    // Fail if file already exists
+    fs.copyFileSync(filename, filename + '-new', fs.constants.COPYFILE_EXCL);
+
     const readInterface = readline.createInterface({
         input: fs.createReadStream(filename),
         output: fs.createWriteStream(filename + '-new'),
