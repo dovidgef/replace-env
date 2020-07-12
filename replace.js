@@ -1,5 +1,6 @@
+#!/usr/bin/env node
 /*
-Utility for automatically replacing parts of strings delineated by %string%
+Node.js based command line utility for automatically replacing parts of strings delineated by %string%
 replacing them with `string` environment variable if it exists.
  */
 'use strict';
@@ -26,7 +27,6 @@ if (process.argv.length === 3) {
     });
 
     readInterface.on('line', function(line) {
-        console.log(line);
         if (line) {
             const regex = /%[a-zA-Z_][a-zA-Z0-9_]*%/g;
             let envArray = line.match(regex);
@@ -38,7 +38,7 @@ if (process.argv.length === 3) {
                     }
                 }
             }
-            this.output.write(`added ${line}${EOL}`);
+            this.output.write(`${line}${EOL}`);
         } else {
             this.output.write(EOL);
         }
@@ -52,5 +52,5 @@ if (process.argv.length === 3) {
 
 } else {
     console.log("Error: must receive single argument containing filename");
-    console.log("Usage: 'replace.js <filename.txt>'");
+    console.log("Usage: 'replace-env <filename.txt>'");
 }
