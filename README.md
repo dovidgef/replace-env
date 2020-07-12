@@ -9,7 +9,7 @@ You will need to have a recent version of `Node.js` installed.
 
 ## Instructions
 
-To get started install command line tool globally by running `npm install -g replace-env`
+To get started install command line tool by running `npm install -g replace-env`
 
 To replace all instances of %variable% in file run `replace-env <filename>`. 
 You can add as many parameters in the format %variable_name% as you like.
